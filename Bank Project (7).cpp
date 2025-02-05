@@ -213,7 +213,7 @@ sClient FindClient(string FileName, string AccountNumber)
 
 		while (!(IsAccountNumberExist(ClientsFileName, AccountNumber)))
 		{
-			MyFile.close();
+			
 			cout << "\nClient not Exist("<< AccountNumber<<"), Do you want try again ? [Y / N] ";
 			cin >> confirm;
 			if (confirm == 'y' || confirm == 'Y')
@@ -223,6 +223,7 @@ sClient FindClient(string FileName, string AccountNumber)
 			}
 			else
 			{
+				MyFile.close();
 				GoBackToMainMenue();
 			}
 		}
